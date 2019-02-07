@@ -1,0 +1,28 @@
+PODS:
+  - ReactiveCocoa (8.0.2):
+    - ReactiveSwift (~> 4.0)
+  - ReactiveSwift (4.0.0):
+    - Result (~> 4.0)
+  - Result (4.1.0)
+  - SnapshotTesting (1.1.0)
+
+DEPENDENCIES:
+  - ReactiveCocoa (~> 8.0)
+  - SnapshotTesting (~> 1.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ReactiveCocoa
+    - ReactiveSwift
+    - Result
+    - SnapshotTesting
+
+SPEC CHECKSUMS:
+  ReactiveCocoa: fbd26e9ba60e98417ee47433e59465a98ed9da0f
+  ReactiveSwift: a2bb9ace428a109e9c0209615645d9d286c8c433
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SnapshotTesting: 8ed6a4dceee63f59a60e1bc86f9adbba54eb9287
+
+PODFILE CHECKSUM: 8ee717ed1d7240372402ccf74f632de355ae99e4
+
+COCOAPODS: 1.5.3
