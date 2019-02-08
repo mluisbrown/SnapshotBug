@@ -27,27 +27,13 @@ class SnapshotBugTests: XCTestCase {
                 }
 
                 waitForExpectations(timeout: 5, handler: nil)
-                verify(view: window, for: device)
+                assertSnapshot(
+                    matching: window,
+                    as: .image(),
+                    named: device.indentifier
+                )
 //            }
         }
-    }
-
-    func verify(
-        view: UIView,
-        for device: Device,
-        file: StaticString = #file,
-        function: String = #function,
-        line: UInt = #line,
-        tolerance: CGFloat = 0.01
-    ) {
-        assertSnapshot(
-            matching: view,
-            as: .image(precision: 1.0 - Float(tolerance)),
-            named: device.indentifier,
-            file: file,
-            testName: function,
-            line: line
-        )
     }
 
     func makeWindow(for viewController: UIViewController, device: Device) -> UIWindow {
@@ -59,7 +45,6 @@ class SnapshotBugTests: XCTestCase {
 
         return window
     }
-
 }
 
 public enum Device {
