@@ -21,6 +21,6 @@ This will cause a slightly different Zombie error to appear in the console:
 
 `*** -[UIWindowLayer isHidden]: message sent to deallocated instance 0x600000d4cd60`
 
-This bug is somehow related with the async nature of the test and the fact that `SnapshotTesting` also uses `XCWaiter`. This kind of test works fine when using [ios-snapshot-test-case](https://github.com/uber/ios-snapshot-test-case] which is not async.
+This bug is somehow related with the async nature of the test and the fact that `SnapshotTesting` also uses `XCWaiter`. This kind of test works fine when using [ios-snapshot-test-case](https://github.com/uber/ios-snapshot-test-case) which is not async.
 
 Somehow the combination of the two async code paths is probably causing the run loop to release objects which otherwise would not be released.
